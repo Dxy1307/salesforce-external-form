@@ -1,44 +1,46 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Subscription</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main class="card">
+    <h1>Contact us</h1>
+    <p>Complete the form below.</p>
 
-<div class="container">
-    <h1>Stay Connected!</h1>
-    <p>Subscribe to receive our latest updates.</p>
+    <!-- IMPORTANT:
+      Replace the placeholder attributes below with the exact Form Attributes
+      copied from your published Salesforce Form Handler.
+      Do not invent or modify Salesforce-generated values.
+    -->
+    <form id="MCIKE2NJIRQBBQDAJN4NBA4Y5JOU" class="lead-form" data-uma-forms="true" method="post"></form>
+      <!-- Paste exact Salesforce Form Attributes into this opening form tag. -->
 
-    <form id="marketingForm">
+      <label for="firstName">First name</label>
+      <input id="firstName" name="firstname" autocomplete="given-name" required>
 
-        <label>First Name</label>
-        <input type="text" name="firstname" required>
+      <label for="lastName">Last name</label>
+      <input id="lastName" name="lastname" autocomplete="family-name" required>
 
-        <label>Last Name</label>
-        <input type="text" name="lastname" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+      <label class="consent">
+        <input type="checkbox" name="marketing_opt_in" value="true" required>
+        I agree to receive marketing communications.
+      </label>
 
-        <label class="consent">
-            <input
-                type="checkbox"
-                name="marketing_opt_in"
-                value="true"
-            >
-            I agree to receive marketing emails.
-        </label>
-
-        <button type="submit">Subscribe</button>
+      <button type="submit">Submit</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
     </form>
+  </main>
 
-    <p id="message"></p>
-</div>
-
-<script src="script.js"></script>
+  <!-- Paste the exact Salesforce Form Handler Tracking Script here,
+       usually immediately before </body>. -->
+  <script async src="https://ascottbdspokehub--mcn.sandbox.my.site.com/lp/assets/scripts/external-form-handler-host.min.js" onload="SFDCFormHandler.init('https://ascottbdspokehub--mcn.sandbox.my.site.com/lp')"></script>
+  <script src="app.js"></script>
 </body>
 </html>
