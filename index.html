@@ -29,10 +29,19 @@
       <input id="email" name="email" type="email" autocomplete="email" required>
 
       <label class="consent">
-        <input type="checkbox" name="marketing_opt_in">
+        <input
+          type="checkbox"
+          id="marketing_opt_in_checkbox"
+        >
         I agree to receive marketing communications.
       </label>
-      <input type="hidden" name="marketing_opt_in" id="marketing_opt_in" value="false">
+
+      <input
+        type="hidden"
+        name="marketing_opt_in"
+        id="marketing_opt_in"
+        value="false"
+      >
 
       <button type="submit">Submit</button>
       <p id="form-status" role="status" aria-live="polite"></p>
